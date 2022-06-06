@@ -1,6 +1,6 @@
-const controller = require("../controllers/controller");
+const controller = require("../controllers/userController");
 const express = require("express");
 const router = express.Router();
 const middleware = require("../middleware/middleware");
-router.get("/", middleware.verifyToken, controller.getmsggroup);
+router.post("/", middleware.verifyToken, controller.addmessage);
 module.exports = router;
