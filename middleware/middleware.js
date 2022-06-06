@@ -6,7 +6,7 @@ const verifyToken = (req, res, next) => {
       if (err) {
         return res.sendStatus(401);
       }
-      //  console.log("bien authentifié");
+      // console.log("bien authentifié");
       // on passe l'id de l'utilsateur dans la requete pour qu'il soit accessible par les prochains middleware
       req.userid = user.userid;
       // appel de prochain middleware
